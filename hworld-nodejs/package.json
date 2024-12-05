@@ -1,0 +1,19 @@
+{
+    "name": "hworld-nodejs",
+    "version": "v1",
+    "description": "Hello World app in Node.js v1",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Jay",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.19.2",
+        "hworld-nodejs": "file:"
+    },
+    "devDependencies": {
+        "webpack": "^5.12.2"
+    },
+    "repository": {}
+}
