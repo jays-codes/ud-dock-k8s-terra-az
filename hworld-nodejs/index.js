@@ -9,7 +9,7 @@ const process = require('process');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('{"message": "Jay\'s nodejs HWorld! v1"}');
+    res.send('{"message": "Jay\'s nodejs HWorld! v2"}');
 });
 
 app.listen(5000, function() {

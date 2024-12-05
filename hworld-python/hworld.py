@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "{\"message\": \"Jay's HWorld! v1\"}"
+    return "{\"message\": \"Jay's HWorld! v2\"}"
 
 #run at port 5000
 if __name__ == "__main__":
