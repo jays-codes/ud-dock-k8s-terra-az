@@ -1,5 +1,8 @@
 Jay's proj repo for DevOps Training : Docker, Kubernetes, Terraform, Azure DevOps (by R.Karanam)
 
+repo: DEVOPS-MASTER-CLASS
+- generated, modified K8s deployment/service.yaml via kubectl ">" and "-o yaml" options; kubectl apply -f
+
 proj: hworld-java (dep: spring boot, jdk 21)
 - created java project: controller, etc; created Dockerfile; created docker image and ran container
 
