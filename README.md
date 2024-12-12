@@ -1,6 +1,7 @@
 Jay's proj repo for DevOps Training : Docker, Kubernetes, Terraform, Azure DevOps (by R.Karanam)
 
 repo: DEVOPS-MASTER-CLASS
+- cleaned up and optimized deployment.yaml
 - generated, modified K8s deployment/service.yaml via kubectl ">" and "-o yaml" options; kubectl apply -f
 
 proj: hworld-java (dep: spring boot, jdk 21)
