@@ -1,6 +1,7 @@
 Jay's proj repo for DevOps Training : Docker, Kubernetes, Terraform, Azure DevOps (by R.Karanam)
 
 proj: terraform-test
+- created users from list; explored list functions
 - used variables in tf files; terraform.tfvars
 - initialized new terraform project; created 2 IAM users
 - separated tf files; terraform destroy to cleanup
