@@ -1,6 +1,7 @@
 Jay's proj repo for DevOps Training : Docker, Kubernetes, Terraform, Azure DevOps (by R.Karanam)
 
 proj: terraform-test
+- separated tf files; terraform destroy to cleanup
 - created new AWS user via terraform, updated name
 - created s3 bucket via terraform, edited versioning
 - created new AWS user, access keys
