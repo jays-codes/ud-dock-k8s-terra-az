@@ -26,3 +26,14 @@ resource "aws_s3_bucket_versioning" "bucket_versioning" {
 resource "aws_iam_user" "user-jayslabs" {
   name = "user-jayslabs-07"
 }
+
+variable "users" {
+  type = map(object({
+    dept = string
+  }))
+  default = {
+    yor = { dept = "hr" }
+    loido = { dept = "hr" }
+    becky = { dept = "dev" }
+  }
+}

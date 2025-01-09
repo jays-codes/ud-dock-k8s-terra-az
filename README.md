@@ -1,6 +1,7 @@
 Jay's proj repo for DevOps Training : Docker, Kubernetes, Terraform, Azure DevOps (by R.Karanam)
 
 proj: terraform-test
+- created folder 04-maps; created map; map functions: tomap, keys, values, lookup; tags; map of maps
 - used set (toset) to use name as key instead of index
 - created users from list; explored list functions
 - used variables in tf files; terraform.tfvars
