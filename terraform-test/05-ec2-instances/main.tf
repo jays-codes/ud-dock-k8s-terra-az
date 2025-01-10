@@ -62,11 +62,13 @@ resource "aws_security_group" "http_server_sg" {
 #   }))
 # }
 
-# resource "aws_instance" "ec2_instances" {
-#   for_each = var.ec2_instances
-#   ami = each.value.ami
-#   instance_type = each.value.instance_type
-# }
+resource "aws_instance" "http_server_ec2" {
+  ami                    = "ami-05576a079321f21f8"
+  instance_type          = "t2.micro"
+  key_name               = "default-ec2-keypair"
+  vpc_security_group_ids = [aws_security_group.http_server_sg.id]
+  subnet_id              = "subnet-074a363ec3a3913c3"
+}
 
 # output "ec2_instances" {
 #   value = aws_instance.ec2_instances

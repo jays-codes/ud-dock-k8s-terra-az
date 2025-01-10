@@ -1,6 +1,7 @@
 Jay's proj repo for DevOps Training : Docker, Kubernetes, Terraform, Azure DevOps (by R.Karanam)
 
 proj: terraform-test
+- created EC2 Key Pair; created aws_instance (ec2 instance)
 - created folder 05-ec2-instances; created ec2 instance; created security group: ingress, egress; 
 - created folder 04-maps; created map; map functions: tomap, keys, values, lookup; tags; map of maps
 - used set (toset) to use name as key instead of index
