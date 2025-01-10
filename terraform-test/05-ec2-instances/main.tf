@@ -1,3 +1,7 @@
+variable "aws_keypair" {
+  default = "C:\\jay\\training\\temp\\terraform\\aws\\aws_keys\\default-ec2-keypair.pem"
+}
+
 terraform {
   required_providers {
     aws = {
@@ -68,6 +72,22 @@ resource "aws_instance" "http_server_ec2" {
   key_name               = "default-ec2-keypair"
   vpc_security_group_ids = [aws_security_group.http_server_sg.id]
   subnet_id              = "subnet-074a363ec3a3913c3"
+
+  connection {
+    type        = "ssh"
+    host        = self.public_ip
+    user        = "user_jayslabs_cli"
+    private_key = file(var.aws_keypair)
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "sudo yum install -y httpd",
+      "sudo systemctl start httpd",
+      "sudo systemctl enable httpd",
+      "echo ${self.public_dns} is active | sudo tee /var/www/html/index.html"
+    ]
+  }
 }
 
 # output "ec2_instances" {
