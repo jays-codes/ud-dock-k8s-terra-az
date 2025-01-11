@@ -71,12 +71,20 @@ resource "aws_security_group" "http_server_sg" {
 #   }))
 # }
 
+#get default subnets
+data "aws_subnets" "default_subnets" {
+  filter {
+    name   = "vpc-id"
+    values = [aws_default_vpc.default_vpc.id]
+  }
+}
+
 resource "aws_instance" "http_server_ec2" {
   ami                    = "ami-05576a079321f21f8"
   instance_type          = "t2.micro"
   key_name               = "default-ec2-keypair"
   vpc_security_group_ids = [aws_security_group.http_server_sg.id]
-  subnet_id              = "subnet-074a363ec3a3913c3"
+  subnet_id              = tolist(data.aws_subnets.default_subnets.ids)[3]
 
   connection {
     type        = "ssh"
