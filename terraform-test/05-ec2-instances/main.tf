@@ -79,8 +79,20 @@ data "aws_subnets" "default_subnets" {
   }
 }
 
+# retrieve default ami
+data "aws_ami" "aws-linux-2-latest" {
+  most_recent = true
+  owners      = ["amazon"]
+
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-hvm*"]
+  }
+}
+
 resource "aws_instance" "http_server_ec2" {
   ami                    = "ami-05576a079321f21f8"
+  #ami                    = data.aws_ami.aws-linux-2-latest.id
   instance_type          = "t2.micro"
   key_name               = "default-ec2-keypair"
   vpc_security_group_ids = [aws_security_group.http_server_sg.id]

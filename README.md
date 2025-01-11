@@ -1,6 +1,7 @@
 Jay's proj repo for DevOps Training : Docker, Kubernetes, Terraform, Azure DevOps (by R.Karanam)
 
 proj: terraform-test
+- used data provider to get default ami - data "aws_ami"
 - used data provider to get default subnets - data "aws_subnets"
 - extracted VPC from AWS resource, aws_default_vpc instead of hardcoding vpc_id
 - Installed HttpServer on ec2: created connection and provisioner blocks, used keypair to connect to ec2 instance; tested running successfully!
