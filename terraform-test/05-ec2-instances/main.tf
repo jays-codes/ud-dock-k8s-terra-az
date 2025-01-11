@@ -76,15 +76,23 @@ resource "aws_instance" "http_server_ec2" {
   connection {
     type        = "ssh"
     host        = self.public_ip
-    user        = "user_jayslabs_cli"
+    user        = "ec2-user"
     private_key = file(var.aws_keypair)
   }
 
-  provisioner "remote-exec" {
+  # provisioner "remote-exec" {
+  #   inline = [
+  #     "sudo yum install -y httpd",
+  #     "sudo systemctl start httpd",
+  #     "sudo systemctl enable httpd",
+  #     "echo ${self.public_dns} is active | sudo tee /var/www/html/index.html"
+  #   ]
+  # }
+
+    provisioner "remote-exec" {
     inline = [
-      "sudo yum install -y httpd",
-      "sudo systemctl start httpd",
-      "sudo systemctl enable httpd",
+      "sudo yum install httpd -y",
+      "sudo service httpd start",
       "echo ${self.public_dns} is active | sudo tee /var/www/html/index.html"
     ]
   }

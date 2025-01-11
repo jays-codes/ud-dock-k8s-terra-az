@@ -1,7 +1,7 @@
 Jay's proj repo for DevOps Training : Docker, Kubernetes, Terraform, Azure DevOps (by R.Karanam)
 
 proj: terraform-test
-- Installed HttpServer on ec2: created connection and provisioner blocks, used keypair to connect to ec2 instance;
+- Installed HttpServer on ec2: created connection and provisioner blocks, used keypair to connect to ec2 instance; tested running successfully!
 - created EC2 Key Pair; created aws_instance (ec2 instance)
 - created folder 05-ec2-instances; created ec2 instance; created security group: ingress, egress; 
 - created folder 04-maps; created map; map functions: tomap, keys, values, lookup; tags; map of maps
