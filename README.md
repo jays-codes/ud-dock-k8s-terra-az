@@ -1,6 +1,7 @@
 Jay's proj repo for DevOps Training : Docker, Kubernetes, Terraform, Azure DevOps (by R.Karanam)
 
 proj: terraform-test
+- created data-providers.tf
 - used data provider to get default ami - data "aws_ami"
 - used data provider to get default subnets - data "aws_subnets"
 - extracted VPC from AWS resource, aws_default_vpc instead of hardcoding vpc_id
