@@ -14,11 +14,16 @@ provider "aws" {
   region = "us-east-1"
 }
 
+#Create Default VPC
+resource "aws_default_vpc" "default_vpc" {
+
+}
+
 #Create Security Group
 resource "aws_security_group" "http_server_sg" {
   name        = "http_server_sg"
   description = "Security group for HTTP Server"
-  vpc_id      = "vpc-029dad9bd9ce1011b"
+  vpc_id      = aws_default_vpc.default_vpc.id
 
   ingress {
     from_port   = 80
@@ -89,7 +94,7 @@ resource "aws_instance" "http_server_ec2" {
   #   ]
   # }
 
-    provisioner "remote-exec" {
+  provisioner "remote-exec" {
     inline = [
       "sudo yum install httpd -y",
       "sudo service httpd start",
