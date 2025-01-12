@@ -1,6 +1,7 @@
 Jay's proj repo for DevOps Training : Docker, Kubernetes, Terraform, Azure DevOps (by R.Karanam)
 
 proj: terraform-test
+- created folder 06-ec2-elb from previous 05-ec2-instances; modified aws_instance to create ec2 instances in multiple subnets: for_each/toset on aws_subnets
 - created data-providers.tf
 - used data provider to get default ami - data "aws_ami"
 - used data provider to get default subnets - data "aws_subnets"
