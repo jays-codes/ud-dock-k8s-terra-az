@@ -1,6 +1,7 @@
 Jay's proj repo for DevOps Training : Docker, Kubernetes, Terraform, Azure DevOps (by R.Karanam)
 
 proj: terraform-test
+- created folder 07-s3-backend-state; created resource aws-s3-bucket for backend state w/ lifecycle settings; created resource aws_s3_bucket_versioning for versioning; created resource aws_s3_bucket_server_side_encryption_configuration for encryption; created resource aws_dynamodb_table for lock table
 - created custom security group for ELB; created Elastic Load Balancer: aws_elb resource
 - created folder 06-ec2-elb from previous 05-ec2-instances; modified aws_instance to create ec2 instances in multiple subnets: for_each/toset on aws_subnets
 - created data-providers.tf
