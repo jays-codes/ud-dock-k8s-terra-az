@@ -1,3 +1,3 @@
 output "iam_user_details" {
-  value = aws_iam_user.user-jayslabs
+  value = aws_iam_user.user_jayslabs
 }
