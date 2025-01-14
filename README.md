@@ -1,6 +1,10 @@
 Jay's proj repo for DevOps Training : Docker, Kubernetes, Terraform, Azure DevOps (by R.Karanam)
 
+repo: azure-devops-k8s-terraform-pipeline
+- created gh repo for azure pipeline, cloned, used currencyexchangeservice microservice to test; 
+
 proj: terraform-test
+- created folder 08-modules; created terraform modules for users; referenced module using module "user_module" for dev and qa; used locals
 - created workspaces (prod); factored in workspace when creating resources: aws_iam_user; terraform workspace commands: new, list, select, delete
 - modified user/main.tf to use backend s3: added backend "s3" block; added bucket, key, region, dynamodb_table, encrypt
 - created folder 07-s3-backend-state; created resource aws-s3-bucket for backend state w/ lifecycle settings; created resource aws_s3_bucket_versioning for versioning; created resource aws_s3_bucket_server_side_encryption_configuration for encryption; created resource aws_dynamodb_table for lock table
