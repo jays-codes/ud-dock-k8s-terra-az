@@ -1,6 +1,10 @@
 Jay's proj repo for DevOps Training : Docker, Kubernetes, Terraform, Azure DevOps (by R.Karanam)
 
 repo: azure-devops-k8s-terraform-pipeline
+- modified pipeline
+- created self-hosted agent (FirstAgent) in agent pool (TestAgent) to run pipeline locally; successfully ran test pipeline
+- created starter pipeline: 01-1st-azure-pipeline.yml
+- added project; modified readme
 - created gh repo for azure pipeline, cloned, used currencyexchangeservice microservice to test; 
 
 proj: terraform-test
